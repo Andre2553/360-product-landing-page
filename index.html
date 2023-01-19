@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <title>360 - Sofa</title>
+</head>
+<body>
+    <div id="app">
+      <div id="img-container">
+        <button id="btn-360"><img src="./assets/360.svg" alt="360 - button"></button>
+        <button id="close-btn"><img src="./assets/close.svg" alt="Close button"></button>
+        <img id="static-sofa" src="./assets/sofa.png" alt="Sofa Margot II - Rose">
+        <img id="animated-sofa" src="./assets/sofa-360.gif" alt="Sofa Margot II - Rose Animated">
+      </div>
+      <div id="product-info">
+        <h4>CODE: 42404</h4>
+        <h1>Sofa Margot II - Rose</h1>
+        <p>AU$ 2,000</p>
+        <button>ADD TO THE CART</button>
+      </div>
+    </div>
+</body>
+<script>
+  const btn360 = document.getElementById("btn-360");
+  const closeBtn = document.getElementById("close-btn");
+  const staticSofa = document.getElementById("static-sofa");
+  const animatedSofa = document.getElementById("animated-sofa");
+
+  btn360.addEventListener("click", () => {
+    staticSofa.style.display = "none";
+    animatedSofa.style.display = "block";
+    closeBtn.style.display = "block";
+    btn360.style.display = "none";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    btn360.style.display = "block";
+    staticSofa.style.display = "block";
+    animatedSofa.style.display = "none";
+    closeBtn.style.display = "none";
+  });
+</script>
+</html>

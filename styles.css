@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --bg-color: #d9cdf7;
+  --text-color: #271a45;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+#app  {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 63px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 100px;
+}
+/* Responsive */
+@media (max-width: 950px) {
+  #app {
+    flex-direction: column;
+    padding:40px;
+  }
+  #img-container {
+    max-width: 90vw;
+  }
+}
+
+
+#img-container {
+  display: flex;
+  position: relative;
+}
+
+#btn-360 {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  display:none
+  
+}
+#btn-360 img {
+  width: 3.5rem;
+  object-fit: cover;
+  
+}
+#close-btn img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+#close-btn {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+#static-sofa {
+  width: 40rem;
+  object-fit: cover;
+  display: none;
+}
+#animated-sofa {
+  width: 40rem;
+  object-fit: cover;
+}
+
+#product-info button{
+  margin-top: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  background-color: transparent;
+  width: 12rem;
+  height: 3rem;
+  font-size: 1rem;
+  border: 0.5px solid #271A45;
+  border-radius: 999px;
+}
+#product-info button:hover{
+  background-color: #271A45;
+  color: #fff;
+  cursor: pointer;
+}
+#product-info h4{
+  
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 100%;
+}
+#product-info h1{
+  margin-top: 12px;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 100%;
+}
+
+#product-info p {
+  margin-top: 12px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 100%;
+
+}
